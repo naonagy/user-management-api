@@ -8,7 +8,6 @@ use App\Http\Controllers\UserController;
 
 
 // Public routes
-Route::get('/', fn() => 'API');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -26,10 +25,5 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 });
 
-Route::get('/', function () {
-    return 'API';
-});
-
-Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 

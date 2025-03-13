@@ -1,0 +1,9 @@
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
+}
+#loginSection {
+    display: block; /* Ensure login is visible at start */
+}

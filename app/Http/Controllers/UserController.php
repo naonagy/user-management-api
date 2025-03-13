@@ -22,6 +22,7 @@ class UserController extends Controller
          // Try to find the user by ID or email
          $user = User::where('id', $identifier)
                      ->orWhere('email', $identifier)
+                     ->orWhere('name', $identifier)
                      ->first();
      
          if (!$user) {
@@ -37,7 +38,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed|min:8'
+            'password' => 'required|min:8'
         ]);
  
  
@@ -69,7 +70,7 @@ class UserController extends Controller
          $request->validate([
             'name' => 'sometimes|max:255',
             'email' => 'sometimes|email|unique:users,email,' . $id,
-            'password' => 'sometimes|confirmed|min:8'
+            'password' => 'sometimes|min:8'
         ]);
  
          $user->update([
