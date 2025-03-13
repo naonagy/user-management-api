@@ -16,8 +16,9 @@ class AuthController extends Controller
         $fields = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed'
+            'password' => 'required|confirmed|min:8'
         ]);
+        
         $user = User::create($fields);
 
         $token = $user->createToken($request->name);
@@ -50,6 +51,11 @@ class AuthController extends Controller
         ];
     }
 
+    public function me(Request $request) {
+        return response()->json($request->user());
+    }
+    
+
     public function logout(Request $request)
     {
         $request->user()->tokens()->delete();
@@ -57,6 +63,6 @@ class AuthController extends Controller
         return [
             'message' => 'You are logged out'
         ];
-    }
+    }   
 }
 
