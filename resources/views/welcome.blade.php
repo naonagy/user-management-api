@@ -27,6 +27,5 @@
 <body>
     <h1>Welcome to Our App</h1>
     <p>We are glad to have you here!</p>
-    <button onclick="window.location.href='/open-index'">Sign in</button>
 </body>
 </html>
