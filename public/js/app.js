@@ -216,7 +216,7 @@ $(document).on('click', '.deleteUserBtn', function() {
             success: function(response) {
                 // Hide the add user form and show user/admin section again
                 $('#addUserForm').hide();
-                $('#userSection').show();  // Or show the admin section based on the role
+                $('#userSection').hide();  // Or show the admin section based on the role
                 $('#adminSection').show();
                 // Optionally, refresh the list of users or display a success message
                 alert('User added successfully!');
