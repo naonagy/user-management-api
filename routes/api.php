@@ -7,6 +7,14 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\UserController;
 
 
+Route::get('/', function () {
+    try {
+        return response()->file(public_path('index.html'));
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
+    }
+});
+
 // Public routes
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
