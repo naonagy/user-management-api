@@ -3,6 +3,7 @@
 **Overview**
 
 This is a basic user management app built with Laravel. It lets you easily manage users with simple CRUD operations and includes login/logout features for both admins and regular users.
+This app is deployed at: https://user-management-api-production-4435.up.railway.app/
 
 ***Login Credentials***
 
