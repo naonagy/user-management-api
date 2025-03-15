@@ -261,7 +261,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('8yZmw6oWrvOUq26r2oOsOUt1GDicbjwFAz162Wq7',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiOUFHanpvQWQ2dmpPUnpGdHJBMEpHRFA1TUFtVTRlYVQ1dzBwUlFxbCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=',1741720273);
+INSERT INTO `sessions` VALUES ('8yZmw6oWrvOUq26r2oOsOUt1GDicbjwFAz162Wq7',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiOUFHanpvQWQ2dmpPUnpGdHJBMEpHRFA1TUFtVTRlYVQ1dzBwUlFxbCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=',1741720273),('hF25IRyESTW7uuJ2MrPTABbh88HAgv4eGNdlXmVG',NULL,'127.0.0.1','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36','YTozOntzOjY6Il90b2tlbiI7czo0MDoiZmNHZHg4NWdYTlphbFdFTmNEVXgyM3I1RUF6NmlYTVhhMzc2Zmw0YyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=',1742063021);
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +284,7 @@ CREATE TABLE `users` (
   `role` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +293,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'NN Updated','naomi24@email.com',NULL,'$2y$12$.rty32GdMu2UVWUexQVELOqzECg51T1AEsA2tEY.iXwQ5qcEGWa.G',NULL,'2025-03-11 17:19:43','2025-03-13 19:47:05',0),(5,'Admin','admin@admin.com','2025-03-12 19:04:18','$2y$12$llW6vEpq5LeBZDyr8h/5/e66HzZ8vuX8eGFi5/9B1.4E60gNGX2T2','ocnO4ENlOd','2025-03-12 19:04:18','2025-03-12 19:04:18',1),(6,'John','jon5@email.com',NULL,'$2y$12$rZk.KvjwIlw3Ps1zbQlQRO1.5qZ1hegNY/WTHeDEVlzmxAnHpSt8W',NULL,'2025-03-13 13:36:32','2025-03-13 13:36:32',1),(8,'Andrei','andrei@email.com',NULL,'$2y$12$hf/Zcu3RpgI318R.fptZQOz1T/CTjDjmM7fumvkld67Dde5y4Qc1.',NULL,'2025-03-13 16:58:45','2025-03-13 16:58:45',0),(9,'Johnny','jon55@email.com',NULL,'$2y$12$QpJ0Ninyqf1eOWDniFkXW.PTq7hx5E9HSEmFmRknQqRHI09RCRSF.',NULL,'2025-03-13 17:23:54','2025-03-13 17:23:54',1),(10,'Maria','maria@email.com',NULL,'$2y$12$4F/o7RHyGLseJSMCUxyaxOp8jJuEz4AksmkOt0tmxc9O9lWuVqQtu',NULL,'2025-03-13 18:29:32','2025-03-13 18:29:32',0),(11,'Daria','daria@email.com',NULL,'$2y$12$SRDiOgTsgqxcuJ45l0M1Ce2DsKdRq0tuwP6TgogpCukLlDi5Wt01C',NULL,'2025-03-13 18:53:56','2025-03-13 18:53:56',1),(17,'Mircea','mircea@email.com',NULL,'$2y$12$TcbCObDNeVn/O9Vw0FBB0OOl2tCB6KuwLd0pI3DHiPDuCxxYkQfTy',NULL,'2025-03-13 19:42:42','2025-03-13 19:42:42',0),(18,'Alina','alinae@example.com',NULL,'$2y$12$.XGugv9abag/OPHmenOFoORd4wIe5pO2qL7al.5z36aIPdg4RqazK',NULL,'2025-03-13 19:47:04','2025-03-13 19:47:04',0),(19,'Dana','midea@email.com',NULL,'$2y$12$iUGkiamvNF7dK2gsVyYJJ.8P2Y8Lmv9iwFUi4ho7oNd51h4UZJ.J6',NULL,'2025-03-13 19:48:38','2025-03-13 19:48:38',0),(20,'David','davidd@email.com',NULL,'$2y$12$M.baD8gnNX9wyMoyHvUWOerlYOR44TvtZ1etQJTTMRZK5lKYvVG7K',NULL,'2025-03-13 19:48:51','2025-03-13 19:48:51',0);
+INSERT INTO `users` VALUES (1,'NN Updated','naomi24@email.com',NULL,'$2y$12$.rty32GdMu2UVWUexQVELOqzECg51T1AEsA2tEY.iXwQ5qcEGWa.G',NULL,'2025-03-11 17:19:43','2025-03-13 19:47:05',0),(2,'Admin','admin@example.com',NULL,'adminpassword',NULL,NULL,NULL,1),(3,'User','user@example.com',NULL,'userpassword',NULL,NULL,NULL,0),(5,'Admin','admin@admin.com','2025-03-12 19:04:18','$2y$12$llW6vEpq5LeBZDyr8h/5/e66HzZ8vuX8eGFi5/9B1.4E60gNGX2T2','ocnO4ENlOd','2025-03-12 19:04:18','2025-03-12 19:04:18',1),(6,'John','jon5@email.com',NULL,'$2y$12$rZk.KvjwIlw3Ps1zbQlQRO1.5qZ1hegNY/WTHeDEVlzmxAnHpSt8W',NULL,'2025-03-13 13:36:32','2025-03-13 13:36:32',1),(8,'Andrei','andrei@email.com',NULL,'$2y$12$hf/Zcu3RpgI318R.fptZQOz1T/CTjDjmM7fumvkld67Dde5y4Qc1.',NULL,'2025-03-13 16:58:45','2025-03-13 16:58:45',0),(9,'Johnny','jon55@email.com',NULL,'$2y$12$QpJ0Ninyqf1eOWDniFkXW.PTq7hx5E9HSEmFmRknQqRHI09RCRSF.',NULL,'2025-03-13 17:23:54','2025-03-13 17:23:54',1),(10,'Maria','maria@email.com',NULL,'$2y$12$4F/o7RHyGLseJSMCUxyaxOp8jJuEz4AksmkOt0tmxc9O9lWuVqQtu',NULL,'2025-03-13 18:29:32','2025-03-13 18:29:32',0),(11,'Daria','daria@email.com',NULL,'$2y$12$SRDiOgTsgqxcuJ45l0M1Ce2DsKdRq0tuwP6TgogpCukLlDi5Wt01C',NULL,'2025-03-13 18:53:56','2025-03-13 18:53:56',1),(17,'Mircea','mircea@email.com',NULL,'$2y$12$TcbCObDNeVn/O9Vw0FBB0OOl2tCB6KuwLd0pI3DHiPDuCxxYkQfTy',NULL,'2025-03-13 19:42:42','2025-03-13 19:42:42',0),(18,'Alina','alinae@example.com',NULL,'$2y$12$.XGugv9abag/OPHmenOFoORd4wIe5pO2qL7al.5z36aIPdg4RqazK',NULL,'2025-03-13 19:47:04','2025-03-13 19:47:04',0),(19,'Dana','midea@email.com',NULL,'$2y$12$iUGkiamvNF7dK2gsVyYJJ.8P2Y8Lmv9iwFUi4ho7oNd51h4UZJ.J6',NULL,'2025-03-13 19:48:38','2025-03-13 19:48:38',0),(20,'David','davidd@email.com',NULL,'$2y$12$M.baD8gnNX9wyMoyHvUWOerlYOR44TvtZ1etQJTTMRZK5lKYvVG7K',NULL,'2025-03-13 19:48:51','2025-03-13 19:48:51',0);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -306,4 +306,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-14  0:53:29
+-- Dump completed on 2025-03-15 20:36:00
