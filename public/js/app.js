@@ -6,7 +6,7 @@ $(document).ready(function() {
         const password = $('#loginPassword').val();
 
         $.ajax({
-            url: 'http://127.0.0.1:8000/api/login', 
+            url: 'https://user-management-api-production-4435.up.railway.app/api/login', 
             method: 'POST',
             contentType: 'application/json',
             data: JSON.stringify({ email, password }),
@@ -27,7 +27,7 @@ $(document).ready(function() {
     // Handle logout
     $('#logoutBtn, #logoutAdminBtn').on('click', function() {
         $.ajax({
-            url: 'http://127.0.0.1:8000/api/logout',
+            url: 'https://user-management-api-production-4435.up.railway.app/api/logout',
             method: 'POST',
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') },
             success: function() {
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     function fetchUserData(token) {
         $.ajax({
-            url: 'http://127.0.0.1:8000/api/me',
+            url: 'https://user-management-api-production-4435.up.railway.app/api/me',
             method: 'GET',
             headers: { 'Authorization': 'Bearer ' + token },
             success: function(response) {
@@ -81,7 +81,7 @@ $(document).ready(function() {
   // Fetch and display users when "Manage Users" is clicked
   $('#manageUsersBtn').on('click', function() {
     $.ajax({
-        url: 'http://127.0.0.1:8000/api/users',
+        url: 'https://user-management-api-production-4435.up.railway.app/api/users',
         method: 'GET',
         headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') },
         success: function(response) {
@@ -125,7 +125,7 @@ $(document).on('click', '.editUserBtn', function() {
 
     // Fetch user details for editing
     $.ajax({
-        url: `http://127.0.0.1:8000/api/users/${userId}`, // Fetch user details
+        url: `https://user-management-api-production-4435.up.railway.app/api/users/${userId}`, // Fetch user details
         method: 'GET',
         headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') },
         success: function(user) {
@@ -148,7 +148,7 @@ $('#updateUserBtn').on('click', function() {
     const updatedRole = $('#editUserRole').val();
 
     $.ajax({
-        url: `http://127.0.0.1:8000/api/users/${userId}`, // Update user
+        url: `https://user-management-api-production-4435.up.railway.app/api/users/${userId}`, // Update user
         method: 'PUT',
         headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') },
         contentType: 'application/json',
@@ -176,7 +176,7 @@ $(document).on('click', '.deleteUserBtn', function() {
 
     if (confirm("Are you sure you want to delete this user?")) {
         $.ajax({
-            url: `http://127.0.0.1:8000/api/users/${userId}`,
+            url: `https://user-management-api-production-4435.up.railway.app/api/users/${userId}`,
             method: 'DELETE',
             headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') },
             success: function() {
@@ -203,7 +203,7 @@ $(document).on('click', '.deleteUserBtn', function() {
 
         // Send POST request to create a new user
         $.ajax({
-            url: 'http://127.0.0.1:8000/api/users/add', // Replace with your API endpoint
+            url: 'https://user-management-api-production-4435.up.railway.app/api/users/add',
             method: 'POST',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -252,7 +252,7 @@ $(document).on('click', '.deleteUserBtn', function() {
 
         // Make AJAX request to search for the user by either ID or email
         $.ajax({
-            url: `http://127.0.0.1:8000/api/users/${searchQuery}`, // Use the same route for both ID and email
+            url: `https://user-management-api-production-4435.up.railway.app/api/users/${searchQuery}`, // Use the same route for both ID and email
             method: 'GET',
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
